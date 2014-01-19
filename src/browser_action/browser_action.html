@@ -10,15 +10,39 @@
 		font-size: 2em;
 	}
 </style>
-<script type="text/javascript" src="../../js/jquery-1.9.1.js"></script>
 <script type="text/javascript">
+document.getElementById('findrank').onclick=fetchranks;
+function fetchranks () {
+	// body...
+	var id=document.getElementById('rankbox').value;
 	
+		}
 </script>
-
 
 <div id="mainPopup">
 <h1>Codechef Ranks</h1>
 <p>Enter codechef id I will give you ranks and ratings</p>
 <input id="rankbox" type="text" />
-<button id="findrank">Find Ranks</button>
+<button id="findrank" onclick="fetchrank()">Find Ranks</button>
+<div id="result">
+	<table>
+		<tr>
+			<td></td>
+			<td>Global</td>
+			<td>Country</td>
+			<td>Ratings</td>
+		</tr>
+		<tr>
+			<td>Long</td>
+			<td id="lgrank"></td>
+			<td id="lcrank"></td>
+			<td id="lrating"></td>
+		<tr>
+			<td>Short</td>
+			<td id="sgrank"></td>
+			<td id="scrank"></td>
+			<td id="srating"></td>
+		</tr>
+	</table>
+</div>
 </div>
